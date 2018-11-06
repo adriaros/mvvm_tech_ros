@@ -12,6 +12,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let navigationController = NavigationBar()
+        navigationController.configureTarget(self)
     }
     
     @IBAction func onSelectorButton(_ sender: Any) {

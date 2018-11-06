@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  mvvm_tech_ros
+
+  Created by Adria Ros Saez on 11/6/18.
+  Copyright © 2018 adriaros. All rights reserved.
+*/
+
+//Navigation Bar
+"navBar_selector_title" = "Song Finder";
+"navBar_back_title" = "Back";

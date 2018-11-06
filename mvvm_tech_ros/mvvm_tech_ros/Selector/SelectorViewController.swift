@@ -12,5 +12,7 @@ class SelectorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let navigationController = NavigationBar()
+        navigationController.configureTarget(self)
     }
 }
