@@ -10,15 +10,17 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    let viewModel = MainViewModel()
+    
+    @IBOutlet weak var selectorButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navigationController = NavigationBar()
-        navigationController.configureTarget(self)
+        viewModel.configNavigation(vc: self)
+        viewModel.configViews(button: selectorButton)
     }
     
     @IBAction func onSelectorButton(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "SelectorView", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SelectorViewController") as! SelectorViewController
-        self.navigationController?.pushViewController(nextViewController, animated:true)
+        viewModel.navigateToSelector(origin: self)
     }
 }

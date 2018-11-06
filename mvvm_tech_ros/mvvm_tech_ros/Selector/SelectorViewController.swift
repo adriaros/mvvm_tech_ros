@@ -14,5 +14,15 @@ class SelectorViewController: UIViewController {
         super.viewDidLoad()
         let navigationController = NavigationBar()
         navigationController.configureTarget(self)
+        
+        APIClient.getDefaultList() { (DTO, error) in
+            if error != nil {
+                guard let error = error else { return }
+                print(error)
+            } else {
+                guard let results = DTO?.results else { return }
+                print(results)
+            }
+        }
     }
 }

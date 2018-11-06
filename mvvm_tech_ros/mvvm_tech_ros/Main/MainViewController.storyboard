@@ -18,7 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7q-ba-j3y">
-                                <rect key="frame" x="164" y="386" width="46" height="73"/>
+                                <rect key="frame" x="125" y="391" width="125" height="30"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="onSelectorButton:" destination="O3x-JD-9lA" eventType="touchUpInside" id="EE8-RL-8dX"/>
@@ -27,14 +28,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ljb-kC-A7r" firstAttribute="bottom" secondItem="F7q-ba-j3y" secondAttribute="bottom" constant="319" id="7fp-kd-dOe"/>
-                            <constraint firstItem="F7q-ba-j3y" firstAttribute="top" secondItem="ljb-kC-A7r" secondAttribute="top" constant="298" id="9nS-4I-6Me"/>
-                            <constraint firstItem="F7q-ba-j3y" firstAttribute="leading" secondItem="ljb-kC-A7r" secondAttribute="leading" constant="164" id="WtH-pH-dqd"/>
-                            <constraint firstItem="ljb-kC-A7r" firstAttribute="trailing" secondItem="F7q-ba-j3y" secondAttribute="trailing" constant="165" id="k8U-Rl-sO0"/>
+                            <constraint firstItem="F7q-ba-j3y" firstAttribute="centerY" secondItem="25X-B9-Poi" secondAttribute="centerY" id="LXy-HA-1av"/>
+                            <constraint firstItem="F7q-ba-j3y" firstAttribute="centerX" secondItem="25X-B9-Poi" secondAttribute="centerX" id="bc5-aD-c8j"/>
+                            <constraint firstItem="F7q-ba-j3y" firstAttribute="width" secondItem="25X-B9-Poi" secondAttribute="width" multiplier="1/3" id="jY4-Zt-CAw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ljb-kC-A7r"/>
                     </view>
                     <navigationItem key="navigationItem" id="LFd-nv-Tdu"/>
+                    <connections>
+                        <outlet property="selectorButton" destination="F7q-ba-j3y" id="hlE-hZ-94I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WR-SC-pWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
