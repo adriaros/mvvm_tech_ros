@@ -6,4 +6,21 @@
 //  Copyright © 2018 adriaros. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MainViewController: UIViewController {
+    
+    let viewModel = MainViewModel()
+    
+    @IBOutlet weak var selectorButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.configNavigation(vc: self)
+        viewModel.configViews(button: selectorButton)
+    }
+    
+    @IBAction func onSelectorButton(_ sender: Any) {
+        viewModel.navigateToSelector(origin: self)
+    }
+}
